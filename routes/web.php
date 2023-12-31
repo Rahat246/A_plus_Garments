@@ -1,7 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\auditController;
 use App\Http\Controllers\frontController;
+use App\Http\Controllers\PictureController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,3 +27,19 @@ Route::get('/front-contract',[frontController::class,'contract'])->name('front.c
 Route::get('/front-buyer',[frontController::class,'buyer'])->name('front.buyer');
 Route::get('/front-csr',[frontController::class,'csr'])->name('front.csr');
 Route::get('/front-about',[frontController::class,'about'])->name('front.about');
+
+
+
+Route::get('/backend-admin',[AdminController::class,'admin'])->name('backend.admin');
+Route::get('/backend-adminpage',[AdminController::class,'adminpage'])->name('admin.page');
+Route::get('/backend-create',[AdminController::class,'create'])->name('admin.create');
+Route::post('/create-submit',[AdminController::class,'submit'])->name('create.submit');
+Route::get('/admin-gallery',[AdminController::class,'admingallery'])->name('admin.gallery');
+
+
+Route::get('/audit-create',[auditController::class,'audit'])->name('audit.create');
+Route::post('/audit-store',[auditController::class,'store'])->name('audit.store');
+Route::get('/audit-list',[auditController::class,'auditlist'])->name('audit.list');
+
+
+
