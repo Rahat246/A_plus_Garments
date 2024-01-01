@@ -1,7 +1,6 @@
 @extends('Backend.adminmaster')
-@section('contents')
-<form action="{{route('create.submit')}}"method="POST" enctype="multipart/form-data"> 
-
+@section('contents') 
+<form action="{{route('create.store')}}"method="POST" enctype="multipart/form-data">
 @csrf
 
         <div class="form-group">

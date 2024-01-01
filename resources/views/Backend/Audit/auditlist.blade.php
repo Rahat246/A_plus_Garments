@@ -5,8 +5,8 @@
 
     @foreach ($audits as $image)
     <div class="col-md-4">
-    {{ dump($image->image_data) }}
-    <img src="galleries:image/jpeg;base64,{{ base64_encode($image->image_data) }}" alt="Image">
+    
+    <img src="data:image/jpeg;base64,{{ base64_encode($image->image) }}" alt="Image">
     </div>
 @endforeach
 </div>

@@ -2,13 +2,12 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Product;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Gallery;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Gallery extends Model
+class Product extends Model
 {
-
     use HasFactory;
     protected $guarded=[];
 }

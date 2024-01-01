@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\auditController;
 use App\Http\Controllers\frontController;
 use App\Http\Controllers\PictureController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +34,7 @@ Route::get('/front-about',[frontController::class,'about'])->name('front.about')
 Route::get('/backend-admin',[AdminController::class,'admin'])->name('backend.admin');
 Route::get('/backend-adminpage',[AdminController::class,'adminpage'])->name('admin.page');
 Route::get('/backend-create',[AdminController::class,'create'])->name('admin.create');
-Route::post('/create-submit',[AdminController::class,'submit'])->name('create.submit');
+Route::post('/create-store',[AdminController::class,'store'])->name('create.store');
 Route::get('/admin-gallery',[AdminController::class,'admingallery'])->name('admin.gallery');
 
 
@@ -41,5 +42,9 @@ Route::get('/audit-create',[auditController::class,'audit'])->name('audit.create
 Route::post('/audit-store',[auditController::class,'store'])->name('audit.store');
 Route::get('/audit-list',[auditController::class,'auditlist'])->name('audit.list');
 
+
+Route::get('/product-list',[ProductController::class,'productList'])->name('product.list');
+Route::get('/product-create/form',[ProductController::class,'productCreate'])->name('product.create');
+Route::Post('/product-submit',[ProductController::class,'productSubmit'])->name('product.submit');
 
 

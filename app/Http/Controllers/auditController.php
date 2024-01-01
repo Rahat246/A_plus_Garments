@@ -14,17 +14,23 @@ class auditController extends Controller
 
     public function store(Request $request)
     {
+       
         $request->validate([
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         $imageData = file_get_contents($request->file('image')->getRealPath());
+        $maxLength = 16777215;
+
+        if (strlen($imageData) > $maxLength) {
+            $imageData = substr($imageData, 0, $maxLength);
+        }
        
         
         
 
         Audit::create([
-            'image' => $request->image
+            'image' => $imageData
         ]);
 
         

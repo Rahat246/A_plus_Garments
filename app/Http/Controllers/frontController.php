@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Gallery;
+use App\Models\Audit;
 
 use Illuminate\Http\Request;
 
@@ -18,12 +20,14 @@ class frontController extends Controller
 
     public function gallery()
     {
-        return view('Front.gallery');
+        $galleries=Gallery::all();
+        return view('Front.gallery',['galleries'=>$galleries],compact('galleries'));
     }
 
     public function audit()
     {
-        return view('Front.audit');
+        $audits=Audit::all();
+        return view('Front.audit',['audits'=>$audits],compact('audits'));
     }
 
     public function contract()

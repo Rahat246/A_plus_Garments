@@ -24,19 +24,29 @@ class AdminController extends Controller
         return view('Backend.view.create');
     }
 
-    public function submit(Request $request)
+    public function store(Request $request)
     {
+        
         $request->validate([
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
+        // $image = $request->file('image');
+        // $imageData = file_get_contents($image->path());
+        // $path = 'uploads/images/' . $image->getClientOriginalName();
+        // Storage::disk('public')->put($path, $imageData);
+
+        //$imageData = file_get_contents($request->file('image')->getRealPath());
         $imageData = file_get_contents($request->file('image')->getRealPath());
-       
+        // $imageData = file_get_contents($request->file('image')->getRealPath());
+        $maxLength = 16777215; // Adjust as needed
         
-        
+        if (strlen($imageData) > $maxLength) {
+            $imageData = substr($imageData, 0, $maxLength);
+        }
 
         Gallery::create([
-            'image' => $request->image
+            'image' =>$imageData
         ]);
 
         
