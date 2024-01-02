@@ -28,7 +28,7 @@ class AdminController extends Controller
     {
         
         $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:5120',
         ]);
 
         // $image = $request->file('image');

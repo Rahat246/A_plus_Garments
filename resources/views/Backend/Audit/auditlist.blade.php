@@ -6,9 +6,9 @@
     @foreach ($audits as $image)
     <div class="col-md-4">
     
-    <img src="data:image/jpeg;base64,{{ base64_encode($image->image) }}" alt="Image">
+    <img src="data:image/jpeg;base64,{{ base64_encode($image->image) }}" alt="Image" height="356" weight="205">
     </div>
-@endforeach
+    @endforeach
 </div>
 
 @endsection

@@ -8,16 +8,16 @@
           <!--<h2>Photo Gallery</h2>-->
         </div>
         @foreach ($galleries as $image)
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+        <div class="row portfolio-container" >
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-            <img src="data:image/jpeg;base64,{{ base64_encode($image->image) }}" alt="Image">
+            <img src="data:image/jpeg;base64,{{ base64_encode($image->image) }}" alt="Image" height="250" weight="150">
               <div class="portfolio-info">
                 <h4></h4>
                 <p></p>
                 <div class="portfolio-links">
-                  <a href="data:image/jpeg;base64,{{ base64_encode($image->image) }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a>
+                  <a href="data:image/jpeg;base64,{{ base64_encode($image->image) }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="" height="30" weight="20"><i class="bx bx-plus"></i></a>
                   
                 </div>
               </div>
