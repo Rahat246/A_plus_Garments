@@ -17,7 +17,7 @@
                 <h4></h4>
                 <p></p>
                 <div class="portfolio-links">
-                  <a href="data:image/jpeg;base64,{{ base64_encode($image->image) }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="" height="30" weight="20"><i class="bx bx-plus"></i></a>
+                  <a href="data:image/jpeg;base64,{{ base64_encode($image->image) }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="" alt="Image" height="30" weight="20"><i class="bx bx-plus"></i></a>
                   
                 </div>
               </div>
