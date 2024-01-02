@@ -12,12 +12,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-            <img src="data:image/jpeg;base64,{{ base64_encode($image->image) }}" alt="Image" height="50" width="50">
+            <img src="data:image/jpeg;base64,{{ base64_encode($image->image) }}" alt="Image" height="250" weidth="150">
               <div class="portfolio-info">
                 <h4></h4>
                 <p></p>
                 <div class="portfolio-links">
-                  <a href="data:image/jpeg;base64,{{ base64_encode($image->image) }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="" height="50" width="50"><i class="bx bx-plus"></i></a>
+                  <a href="data:image/jpeg;base64,{{ base64_encode($image->image) }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="" height="50" weidth="50"><i class="bx bx-plus"></i></a>
                   
                 </div>
               </div>
