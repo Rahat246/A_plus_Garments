@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Gallery;
 use App\Models\Audit;
+use App\Models\Product;
 
 use Illuminate\Http\Request;
 
@@ -37,7 +38,8 @@ class frontController extends Controller
 
     public function buyer()
     {
-        return view('Front.buyer');
+        $Products=Product::all();
+        return view('Front.buyer',['Products'=>$Products],compact('Products'));
     }
 
     public function csr()

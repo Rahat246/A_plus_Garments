@@ -10,15 +10,21 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link " href="{{route('admin.create')}}">
+        <a class="nav-link " href="{{route('admin.gallery')}}">
         <i class="bi bi-images"></i>
           <span>Gallery</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="{{route('audit.create')}}">
+        <a class="nav-link " href="{{route('audit.list')}}">
         <i class="bi bi-patch-check"></i>
           <span>Audit & Certificate</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="{{route('product.list')}}">
+        <i class="bi bi-briefcase"></i>
+          <span>Buyer</span>
         </a>
       </li>
       

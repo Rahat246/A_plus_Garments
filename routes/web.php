@@ -36,15 +36,24 @@ Route::get('/backend-adminpage',[AdminController::class,'adminpage'])->name('adm
 Route::get('/backend-create',[AdminController::class,'create'])->name('admin.create');
 Route::post('/create-store',[AdminController::class,'store'])->name('create.store');
 Route::get('/admin-gallery',[AdminController::class,'admingallery'])->name('admin.gallery');
+Route::get('/admin-delete/{id}',[AdminController::class,'adminDelete'])->name('admin.delete');
+Route::get('/admin-edit/{id}',[AdminController::class,'adminEdit'])->name('admin.edit');
+Route::put('/admin-update/{id}',[AdminController::class,'adminUpdate'])->name('admin.update');
 
 
 Route::get('/audit-create',[auditController::class,'audit'])->name('audit.create');
 Route::post('/audit-store',[auditController::class,'store'])->name('audit.store');
 Route::get('/audit-list',[auditController::class,'auditlist'])->name('audit.list');
+Route::get('/audit-delete/{id}',[auditController::class,'auditDelete'])->name('audit.delete');
+Route::get('/audit-edit/{id}',[auditController::class,'auditEdit'])->name('audit.edit');
+Route::put('/audit-update/{id}',[auditController::class,'auditUpdate'])->name('audit.update');
 
 
 Route::get('/product-list',[ProductController::class,'productList'])->name('product.list');
 Route::get('/product-create/form',[ProductController::class,'productCreate'])->name('product.create');
 Route::Post('/product-submit',[ProductController::class,'productSubmit'])->name('product.submit');
+Route::get('/product-delete/{id}',[ProductController::class,'productDelete'])->name('product.delete');
+Route::get('/product-edit/{id}',[ProductController::class,'productEdit'])->name('product.edit');
+Route::put('/product-update/{id}',[ProductController::class,'productUpdate'])->name('product.update');
 
 

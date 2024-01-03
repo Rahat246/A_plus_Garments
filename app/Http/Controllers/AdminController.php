@@ -59,4 +59,41 @@ class AdminController extends Controller
         $galleries=Gallery::all();
         return view('Backend.view.galleryview',['galleries'=>$galleries],compact('galleries'));
     }
+
+    public function adminDelete($id)
+    {
+        $galleries=Gallery::find($id);
+        if($galleries){
+            $galleries->delete();
+        }
+        return back()->with('success', 'Item deleted successfully');
+    
+    }
+
+    public function adminEdit($id)
+    {
+        $galleries=Gallery::find($id);
+        return view('Backend.view.galleryedit',compact('galleries'));
+    }
+
+    public function adminUpdate(Request $request, $id)
+    {
+        $galleries=Gallery::find($id);
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        $imageData = file_get_contents($request->file('image')->getRealpath());
+        $maxLength=16777215;
+
+        if (strlen($imageData) > $maxLength) {
+            $imageData = substr($imageData, 0, $maxLength);
+        }
+
+        $galleries->update([
+            'image'=>$imageData 
+        ]);
+        return redirect()->route('admin.gallery');
+
+    }
 }

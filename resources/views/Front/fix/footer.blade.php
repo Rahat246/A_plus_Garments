@@ -21,19 +21,19 @@
       <div class="col-lg-2 col-md-6 footer-links">
         <!--<h4></h4>-->
         <ul>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">CSR</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Our Buyer</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="{{route('front.frontpage')}}">Home</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="{{route('front.about')}}">About us</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="{{route('front.csr')}}">CSR</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="{{route('front.buyer')}}">Our Buyer</a></li>
         </ul>
       </div>
 
       <div class="col-lg-3 col-md-6 footer-links">
         <!--<h4></h4>-->
         <ul>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Gallery</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Audits & Certificate</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Contact</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="{{route('front.gallery')}}">Gallery</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="{{route('front.audit')}}">Audits & Certificate</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="{{route('front.contract')}}">Contact</a></li>
         </ul>
       </div>
 
