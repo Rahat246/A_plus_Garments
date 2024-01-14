@@ -1,15 +1,51 @@
 @extends('Front.master')
 @section('contents')
 <section id="hero" class="d-flex align-items-center">
-
+  
     
   </section><!-- End Hero -->
-
+  
   <main id="main">
 
     <!-- ======= Clients Section ======= -->
-    <!-- End Clients Section -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
 
+        <div class="section-title">
+          <h2>Our Buyer</h2>
+        </div>
+
+        <section id="clients" class="clients">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/costco.png"  width="250%" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/george.png"  width="250%" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/kik.png"  width="250%" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/lpp.png"  width="250%" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/nkd.png"  width="250%" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/norma.png"  width="250%" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/ovs.png"  width="250%" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/pepco.png"  width="250%" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/piazaitalia.png"  width="250%" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/smyk.png"  width="250%" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/stokomani.png"  width="250%" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/tailorvintage.png"  width="250%" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/terranova.png"  width="250%" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/wibra.png"  width="250%" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/woolworth.png"  width="250%" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section>
+
+      </div>
+    </section>
+    <!-- End Clients Section -->
+    
     <!-- ======= About Section ======= -->
     <section id="about" class="about section-bg">
       <div class="container" data-aos="fade-up">

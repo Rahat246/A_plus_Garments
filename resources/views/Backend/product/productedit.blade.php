@@ -5,8 +5,8 @@
 @csrf
 
 
-        <div class="form-group">
-            <label for="">Product Image</label>
+        <div class="form-group" style="margin-bottom: 20px;">
+            <label for="">Buyer Image</label>
             <input type="file" name="product_image" class="form-control" placeholder="Image" accept="image/*" required value="{{$Products->product_image}}">
         </div>
 

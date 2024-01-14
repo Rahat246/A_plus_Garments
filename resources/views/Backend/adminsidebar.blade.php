@@ -27,6 +27,18 @@
           <span>Buyer</span>
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link " href="{{route('csr.create')}}">
+        <i class="bi bi-briefcase"></i>
+          <span>CSR</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="{{route('contact.list')}}">
+        <i class="bi bi-list"></i>
+          <span>Contact List</span>
+        </a>
+      </li>
       
       
 

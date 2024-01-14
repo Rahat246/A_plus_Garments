@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Gallery;
 use App\Models\Audit;
 use App\Models\Product;
+use App\Models\Contact;
 
 use Illuminate\Http\Request;
 
@@ -34,6 +35,30 @@ class frontController extends Controller
     public function contract()
     {
         return view('Front.contract');
+    }
+    
+    public function submit(Request $request)
+    {
+        $request->validate([
+            'name'=>'required',
+            'email'=>'required',
+            'subject'=>'required',
+            'message'=>'required'
+        ]);
+
+        Contact::create([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'subject'=>$request->subject,
+            'message'=>$request->message
+        ]);
+        return redirect()->route('front.contract');
+    }
+
+    public function contactlist()
+    {
+        $contacts=Contact::all();
+        return view('Backend.contact.contactview',compact('contacts'));
     }
 
     public function buyer()

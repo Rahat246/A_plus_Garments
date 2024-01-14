@@ -5,10 +5,10 @@
 @csrf
 
         <div class="form-group">
-            <label for="">Product Image</label>
+            <label for="">Buyer Image</label>
             <input type="file" name="product_image" class="form-control" placeholder="Image" accept="image/*" required>
         </div>
-
+        </br>
         <button type="submit " class="btn btn-primary">Submit</button>
 
     </div>    

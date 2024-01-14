@@ -7,7 +7,7 @@
             <label for="">Gallery Image</label>
             <input type="file" name="image" class="form-control" placeholder="Image" accept="image/*" required>
         </div>
-
+        </br>
         <button type="submit " class="btn btn-primary">Submit</button>
 
     </div>    

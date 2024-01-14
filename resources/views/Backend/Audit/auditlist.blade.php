@@ -11,10 +11,10 @@
     </div>
 </div>
         </br>
-        <table class="">
+        <table class="table table-hover">
             <thead>
                 <tr>
-                <th scope="col">id</th>
+                <th scope="col" style="text-align: center;">id</th>
                 <th scope="col">Image</th>
                 <th scope="col">Action</th>
                 </tr>
@@ -23,11 +23,11 @@
             <tbody>
             @foreach ($audits as $key=>$image)
                 <tr>
-                <th scope="row">{{$key+1}}</th>
+                <th scope="row" style="width: 10%; text-align: center;">{{$key+1}}</th>
                 <td><img src="data:image/jpeg;base64,{{ base64_encode($image->image) }}" alt="Image" height="50" weight="50"></td>
-                <td>
-                    <a class="btn btn-primary" href="{{route('audit.delete',$image->id)}}"><i class="bi bi-trash"></i></a>
-                    <a class="btn btn-primary" href="{{route('audit.edit',$image->id)}}">Edit</i></a>
+                <td style="width: 25%">
+                    <a class="btn btn-sm btn-primary" href="{{route('audit.delete',$image->id)}}"><i class="bi bi-trash"></i></a>
+                    <a class="btn btn-sm btn-primary" href="{{route('audit.edit',$image->id)}}"><i class="bi bi-pencil-square"></i></i></a>
                 </td>
                 </tr>
                 @endforeach
