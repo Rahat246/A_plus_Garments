@@ -18,8 +18,8 @@ class CheckAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        dd($request->all());
-        if(Auth::check() && Auth::user()->admin){
+        //dd($request->all());
+        if(Auth::user() && Auth::user()->role=='admin'){
             return $next($request);
         } 
         

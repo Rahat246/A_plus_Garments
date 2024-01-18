@@ -46,13 +46,17 @@ class frontController extends Controller
             'message'=>'required'
         ]);
 
+        Contact::create($request->all());
+
+        return response()->json(['success' => "message sent successfully"]);
+
         Contact::create([
             'name'=>$request->name,
             'email'=>$request->email,
             'subject'=>$request->subject,
             'message'=>$request->message
         ]);
-        return redirect()->route('front.contract');
+       
     }
 
     public function contactlist()

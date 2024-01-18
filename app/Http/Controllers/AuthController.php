@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
@@ -29,7 +29,7 @@ class AuthController extends Controller
     public function logout()
     {
        
-       
+        Auth::logout();
         return to_route('admin.login');
     }
 
